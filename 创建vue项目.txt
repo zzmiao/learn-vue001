@@ -1,0 +1,49 @@
+1.初始化一个package.json文件
+   npm init
+
+2.安装webpack webpack-cli
+    npm install webpack-cli --save-dev
+   
+   --save和--save-dev的区别：
+     a.--save：将包安装到dependencies，简写是-S；
+     b.--save-dev：将包安装到devDependencies，简写是-D；
+  
+  dependencies和devDependencies的区别：
+    a.dependencies：运行时的依赖，即这个模块在生产环境下还需要使用；
+    b.devDependencies:开发时的依赖，即这个模块只是在开发时使用；
+
+3.安装webpack
+   npm install webpack --save-dev
+   
+   webpack和webpack-cli的关系：webpack-cli的作用是为了让webpack可以在命令行内准确的运行
+
+4.查看webpack的版本信息
+  npx webpack -v
+  运行webpack工具使用npx webpack ****（npx是node提供的方法）
+
+5.使用webpack执行语句：(mode 表示webpack当前的环境以及对不同的环境的配置)
+  新建src文件，添加main.js
+   npx webpack ./src/main.js --mode development
+   会生成dist/main.js文件
+
+6.为项目配置Babel
+  npm install babel-loader @babel/core @babel/preset-env -D
+
+7.新建build文件，添加webpack.config.js :build/webpack.config.js;
+
+8.在根目录下新建一个babel.config.js文件，用于把es6转成es5
+
+9.安装@babel/polyfill:npm install @babel/polyfill -S
+
+引入Vue
+
+10.npm install vue -S
+
+11.npm install vue-loader vue-template-compiler -D
+
+npm install --save-dev babel-loader babel-core babel-preset-es2015  //这是将es6转换为es5所必须的
+npm install --save-dev postcss-loader css-loader style-loader autoprefixer cssnano    //安装相应loader和插件
+npm install --save-dev less less-loader    //安装less和less-loader
+npm install --save-dev sass sass-loader  //安装sass和sass-loader
+npm install --save-dev file-loader url-loader
+   
